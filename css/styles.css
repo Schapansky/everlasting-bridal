@@ -1298,6 +1298,8 @@ select {
 }
 
 /* --- Responsive --- */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .collections-grid {
     grid-template-columns: 1fr;
@@ -1340,34 +1342,57 @@ select {
   }
 }
 
+/* Mobile — matches original everlastingbridal.com mobile layout */
 @media (max-width: 768px) {
   body {
     font-size: 13px;
   }
+
+  /* Announcement bar — smaller on mobile */
   .announcement-bar {
-    font-size: 10px;
-    padding: 6px 15px;
-  }
-  .utility-bar {
-    padding: 8px 20px;
-    font-size: 11px;
-  }
-  .utility-bar__left {
-    gap: 15px;
-  }
-  .container {
-    padding: 0 20px;
-  }
-  .section {
-    padding: 50px 0;
+    font-size: 9px;
+    padding: 6px 10px;
   }
 
+  /* Utility bar — keep but compress */
+  .utility-bar {
+    padding: 8px 15px;
+    font-size: 10px;
+  }
+  .utility-bar__left {
+    gap: 10px;
+  }
+  .utility-bar__left a:first-child {
+    font-size: 9px;
+  }
+  .utility-bar__right {
+    gap: 12px;
+  }
+  .utility-bar__right svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Header — smaller logo on mobile */
+  .header {
+    padding: 10px 0 0;
+  }
+  .header__logo-wrap {
+    padding: 8px 0 5px;
+  }
+  .header__logo-wrap img {
+    max-height: 55px;
+  }
+
+  /* Hamburger menu */
   .menu-toggle {
     display: flex;
     position: absolute;
-    right: 20px;
-    top: 25px;
+    right: 15px;
+    top: 15px;
   }
+
+  /* Hide desktop nav, show as fullscreen overlay */
   .nav {
     display: none;
     position: fixed;
@@ -1379,17 +1404,20 @@ select {
     z-index: 999;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
   .nav.active {
     display: flex;
   }
   .nav.active .nav__list {
     flex-direction: column;
-    gap: 5px;
+    gap: 0;
+    text-align: center;
   }
   .nav.active .nav__link {
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 15px;
+    padding: 12px 20px;
+    letter-spacing: 0.15em;
   }
   .nav.active .nav__dropdown {
     position: static;
@@ -1399,65 +1427,222 @@ select {
     box-shadow: none;
     border: none;
     padding: 0;
+    min-width: auto;
+  }
+  .nav.active .nav__dropdown a {
+    font-size: 13px;
+    padding: 8px 20px;
+    color: var(--color-gray);
   }
 
+  .container {
+    padding: 0 15px;
+  }
+  .section {
+    padding: 40px 0;
+  }
+
+  /* Hero — responsive */
   .hero__arrow {
-    font-size: 28px;
-    padding: 10px;
+    font-size: 24px;
+    padding: 8px;
   }
+  .hero__arrow--prev {
+    left: 5px;
+  }
+  .hero__arrow--next {
+    right: 5px;
+  }
+  .hero__slide-content {
+    padding: 20px 25px;
+  }
+  .hero__slide-content h2 {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+  }
+  .hero__slide-content .hero__script {
+    font-size: 18px;
+  }
+  .hero__slide-content .hero__line {
+    margin: 8px auto;
+  }
+  .hero__slide-content .btn {
+    padding: 10px 20px;
+    font-size: 10px;
+  }
+
+  /* Collections — stack on mobile */
   .collections-grid {
-    padding: 0 20px;
-  }
-  .collection-card img {
-    height: 300px;
-  }
-  .designers-grid {
     grid-template-columns: 1fr;
-  }
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+    padding: 0 15px;
     gap: 15px;
   }
+  .collection-card img {
+    height: 280px;
+  }
+  .collection-card__title {
+    font-size: 20px;
+  }
+  .collection-card__btn {
+    font-size: 10px;
+    padding: 10px 20px;
+  }
+
+  /* Designers — stack */
+  .designers-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .designer-card {
+    padding: 25px 15px;
+  }
+
+  /* Products — 2 column on mobile */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .product-card__info {
+    padding: 12px 8px;
+  }
+  .product-card__name {
+    font-size: 15px;
+  }
+  .product-card__designer {
+    font-size: 9px;
+  }
+
+  /* Gallery */
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
   }
   .gallery-item:nth-child(5),
   .gallery-item:nth-child(10) {
     grid-column: span 1;
   }
+
+  /* Events */
   .event-card {
-    grid-template-columns: 80px 1fr;
-    gap: 15px;
+    grid-template-columns: 70px 1fr;
+    gap: 12px;
+    padding: 15px 0;
   }
-  .footer__bottom {
-    flex-direction: column;
-    gap: 8px;
+  .event-card__day {
+    font-size: 26px;
   }
+  .event-card__title {
+    font-size: 17px;
+  }
+
+  /* Testimonials */
+  .testimonial-card__quote {
+    font-size: 18px;
+  }
+  .testimonial-card {
+    padding: 0 10px;
+  }
+
+  /* Forms */
   .form-row {
     grid-template-columns: 1fr;
   }
+
+  /* Newsletter */
   .newsletter__form {
     flex-direction: column;
     border-bottom: none;
+    max-width: 300px;
   }
   .newsletter__input {
     border-bottom: 1px solid var(--color-black);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 0 20px;
+  }
+  .footer__logo {
+    max-height: 60px;
+    margin-bottom: 30px;
+  }
+  .footer__grid {
+    gap: 25px;
+  }
+  .footer__heading {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+  .footer__text {
+    font-size: 12px;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  /* Misc */
+  .section-title {
+    font-size: 26px;
+  }
+  .section-desc {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+  .btn {
+    padding: 12px 25px;
+    font-size: 11px;
+  }
+  .preservation {
+    grid-template-columns: 1fr;
   }
   .preservation__content {
-    padding: 30px 20px;
+    padding: 25px 15px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .appointment-cta {
+    padding: 50px 15px;
   }
 }
 
+/* Small phone */
 @media (max-width: 480px) {
   .product-grid {
     grid-template-columns: 1fr;
   }
   .instagram-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .utility-bar__left a:first-child {
     display: none;
+  }
+  .hero__slide-content h2 {
+    font-size: 20px;
+  }
+  .hero__slide-content .hero__script {
+    font-size: 16px;
+  }
+  .hero__slide-content {
+    padding: 15px 20px;
+  }
+  .collection-card img {
+    height: 220px;
+  }
+  .collection-card__title {
+    font-size: 16px;
   }
 }
 
