@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Appointment | Everlasting Bridal</title>
+  <meta name="description" content="Schedule your private bridal appointment at Everlasting Bridal in Monroe, Georgia. Personalized attention, expert stylists, and the dress of your dreams.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>💍</text></svg>">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar__contact">
+        <a href="tel:6786358937">&#9742; (678) 635-8937</a>
+        <a href="mailto:shopeverlastingbridal@gmail.com">&#9993; shopeverlastingbridal@gmail.com</a>
+      </div>
+      <div class="topbar__social">
+        <a href="https://fb.me/everlastingbridalmonroe" target="_blank" rel="noopener" aria-label="Facebook">Fb</a>
+        <a href="https://instagram.com/everlasting.bridal" target="_blank" rel="noopener" aria-label="Instagram">Ig</a>
+        <a href="https://pinterest.com/shopeverlastingbridal" target="_blank" rel="noopener" aria-label="Pinterest">Pi</a>
+        <a href="https://tiktok.com/@everlastingbridal" target="_blank" rel="noopener" aria-label="TikTok">Tk</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo">
+        Everlasting Bridal
+        <span>Monroe, Georgia</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="bridal.html" class="nav__link">Bridal</a>
+            <div class="nav__dropdown">
+              <a href="bridal.html">All Wedding Dresses</a>
+              <a href="bridal.html#designers">Our Designers</a>
+            </div>
+          </li>
+          <li class="nav__item">
+            <a href="tuxes.html" class="nav__link">Tuxes &amp; Suits</a>
+          </li>
+          <li class="nav__item">
+            <a href="accessories.html" class="nav__link">Accessories</a>
+          </li>
+          <li class="nav__item">
+            <a href="our-brides.html" class="nav__link">Our Brides</a>
+            <div class="nav__dropdown">
+              <a href="our-brides.html">Gallery</a>
+              <a href="testimonials.html">Testimonials</a>
+            </div>
+          </li>
+          <li class="nav__item">
+            <a href="appointments.html" class="nav__link active">Appointments</a>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link">About</a>
+            <div class="nav__dropdown">
+              <a href="about.html">Our Story</a>
+              <a href="faq.html">FAQ</a>
+            </div>
+          </li>
+          <li class="nav__item">
+            <a href="events.html" class="nav__link">Events</a>
+          </li>
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="header__action-btn" aria-label="Search">&#128269;</button>
+        <button class="header__action-btn" aria-label="Wishlist">&#9825;</button>
+        <a href="appointments.html" class="btn btn--ghost" style="padding: 0.6rem 1.5rem; font-size: 0.7rem;">
+          <span>Book Now</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero page-hero--appointments">
+    <div class="page-hero__content">
+      <h1 class="page-hero__title">Book Your Appointment</h1>
+      <div class="page-hero__breadcrumb">
+        <a href="index.html">Home</a> &nbsp;/&nbsp; Appointments
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Schedule Your Visit</span>
+        <h2 class="section-title">Your Private Bridal Experience</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="about-grid reveal">
+        <!-- Left: Booking Form -->
+        <div>
+          <h3 style="font-family: var(--font-display); font-size: 1.8rem; font-style: italic; margin-bottom: 2rem; color: var(--color-charcoal);">Request an Appointment</h3>
+
+          <form onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="first-name">First Name</label>
+                <input type="text" id="first-name" class="form-input" placeholder="First name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="last-name">Last Name</label>
+                <input type="text" id="last-name" class="form-input" placeholder="Last name" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone</label>
+                <input type="tel" id="phone" class="form-input" placeholder="(555) 555-5555" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="appointment-type">Appointment Type</label>
+              <select id="appointment-type" class="form-select" required>
+                <option value="" disabled selected>Select appointment type</option>
+                <option value="bridal">Bridal</option>
+                <option value="bridesmaid">Bridesmaid</option>
+                <option value="tuxedo">Tuxedo / Suit</option>
+                <option value="accessories">Accessories</option>
+                <option value="prom">Prom / Formal</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="preferred-date">Preferred Date</label>
+                <input type="date" id="preferred-date" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="preferred-time">Preferred Time</label>
+                <select id="preferred-time" class="form-select" required>
+                  <option value="" disabled selected>Select a time</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="num-guests">Number of Guests</label>
+              <select id="num-guests" class="form-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="notes">Special Requests / Notes</label>
+              <textarea id="notes" class="form-textarea" placeholder="Tell us about your dream dress, your wedding date, or anything else we should know..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: 1rem;">
+              <span>Request Appointment</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: What to Expect -->
+        <div>
+          <h3 style="font-family: var(--font-display); font-size: 1.8rem; font-style: italic; margin-bottom: 2rem; color: var(--color-charcoal);">What to Expect</h3>
+
+          <div style="background: var(--color-champagne); padding: 2.5rem; margin-bottom: 2rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1.3rem; font-style: italic; margin-bottom: 1rem; color: var(--color-charcoal);">Your Appointment Experience</h4>
+            <p style="color: var(--color-warm-gray); line-height: 1.8; margin-bottom: 1.5rem;">
+              Your bridal appointment at Everlasting Bridal is a private, one-on-one experience lasting 60 to 90 minutes. From the moment you arrive, you will be paired with a dedicated stylist who will guide you through every step.
+            </p>
+
+            <ul style="color: var(--color-warm-gray); line-height: 2.2;">
+              <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem;">
+                <span style="position: absolute; left: 0; color: var(--color-gold);">&#10047;</span>
+                Personal stylist assigned to you
+              </li>
+              <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem;">
+                <span style="position: absolute; left: 0; color: var(--color-gold);">&#10047;</span>
+                60 &ndash; 90 minute private session
+              </li>
+              <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem;">
+                <span style="position: absolute; left: 0; color: var(--color-gold);">&#10047;</span>
+                Bring your inspiration photos
+              </li>
+              <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem;">
+                <span style="position: absolute; left: 0; color: var(--color-gold);">&#10047;</span>
+                Up to 4 guests welcome
+              </li>
+              <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem;">
+                <span style="position: absolute; left: 0; color: var(--color-gold);">&#10047;</span>
+                Complimentary refreshments
+              </li>
+              <li style="padding-left: 1.5rem; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--color-gold);">&#10047;</span>
+                No pressure, no rush
+              </li>
+            </ul>
+          </div>
+
+          <div style="background: var(--color-white); padding: 2.5rem; border: 1px solid var(--color-light-gray); margin-bottom: 2rem;">
+            <h4 style="font-family: var(--font-display); font-size: 1.3rem; font-style: italic; margin-bottom: 1rem; color: var(--color-charcoal);">Hours</h4>
+            <ul style="color: var(--color-warm-gray); line-height: 2.2;">
+              <li>Tuesday &ndash; Thursday: 12pm &ndash; 6pm</li>
+              <li>Friday &ndash; Saturday: 10am &ndash; 6pm</li>
+              <li>Sunday &ndash; Monday: By Appointment</li>
+            </ul>
+          </div>
+
+          <div style="background: var(--color-white); padding: 2.5rem; border: 1px solid var(--color-light-gray);">
+            <h4 style="font-family: var(--font-display); font-size: 1.3rem; font-style: italic; margin-bottom: 1rem; color: var(--color-charcoal);">Contact Us Directly</h4>
+            <p style="color: var(--color-warm-gray); line-height: 1.8; margin-bottom: 0.5rem;">
+              Prefer to book by phone? We would love to hear from you.
+            </p>
+            <p style="margin-bottom: 0.5rem;">
+              <a href="tel:6786358937" style="color: var(--color-gold); font-weight: 500;">&#9742; (678) 635-8937</a>
+            </p>
+            <p>
+              <a href="mailto:shopeverlastingbridal@gmail.com" style="color: var(--color-gold); font-weight: 500;">&#9993; shopeverlastingbridal@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            Everlasting Bridal
+            <span>Monroe, Georgia</span>
+          </div>
+          <p class="footer__desc">
+            Your destination for wedding dresses, tuxedos, and formal wear in the heart of historic Monroe. Every bride deserves to feel beautiful.
+          </p>
+          <div class="footer__social">
+            <a href="https://fb.me/everlastingbridalmonroe" target="_blank" rel="noopener" aria-label="Facebook">Fb</a>
+            <a href="https://instagram.com/everlasting.bridal" target="_blank" rel="noopener" aria-label="Instagram">Ig</a>
+            <a href="https://pinterest.com/shopeverlastingbridal" target="_blank" rel="noopener" aria-label="Pinterest">Pi</a>
+            <a href="https://tiktok.com/@everlastingbridal" target="_blank" rel="noopener" aria-label="TikTok">Tk</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="bridal.html">Bridal Collection</a></li>
+            <li><a href="tuxes.html">Tuxes &amp; Suits</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="our-brides.html">Our Brides</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__heading">Information</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__heading">Visit Us</h4>
+          <ul class="footer__contact">
+            <li>
+              <span class="footer__contact-icon">&#9873;</span>
+              <span>600 S. Broad St. Ste. A200<br>Monroe, GA 30655</span>
+            </li>
+            <li>
+              <span class="footer__contact-icon">&#9742;</span>
+              <span>(678) 635-8937</span>
+            </li>
+            <li>
+              <span class="footer__contact-icon">&#9993;</span>
+              <span>shopeverlastingbridal@gmail.com</span>
+            </li>
+          </ul>
+
+          <h4 class="footer__heading" style="margin-top: 2rem;">Hours</h4>
+          <ul class="footer__links" style="font-size: 0.85rem;">
+            <li>Tue - Thu: 12pm - 6pm</li>
+            <li>Fri - Sat: 10am - 6pm</li>
+            <li>Sun - Mon: By Appointment</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Everlasting Bridal. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
