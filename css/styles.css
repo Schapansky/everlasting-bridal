@@ -1258,6 +1258,11 @@ select {
   color: #ccc;
 }
 
+/* Mobile icons — hidden on desktop, shown on mobile */
+.header__mobile-icons {
+  display: none;
+}
+
 /* --- All content visible immediately (no scroll animations) --- */
 .reveal,
 .stagger,
@@ -1324,40 +1329,56 @@ select {
     padding: 6px 10px;
   }
 
-  /* Utility bar — hide text links on mobile, icon-only like original */
+  /* Mobile: merge utility bar INTO the header as one row
+     Original layout: ☰ [logo] [calendar] [phone] [heart] [search]
+     All in one compact bar */
   .utility-bar {
-    padding: 6px 15px;
-  }
-  .utility-bar__left {
-    display: none;
-  }
-  .utility-bar__right {
-    gap: 16px;
-    margin-left: auto;
-  }
-  .utility-bar__right svg {
-    width: 20px;
-    height: 20px;
+    display: none !important;
   }
 
-  /* Header — hamburger LEFT, logo CENTER like original mobile */
   .header {
-    padding: 5px 0 0;
+    padding: 10px 15px !important;
     position: relative;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
   }
   .header__logo-wrap {
-    padding: 5px 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 30px;
   }
   .header__logo-wrap img {
-    max-height: 50px;
+    max-height: 45px;
+  }
+
+  /* Mobile icon bar — same row as logo, right side */
+  .header__mobile-icons {
+    display: flex !important;
+    gap: 12px;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .header__mobile-icons a,
+  .header__mobile-icons button {
+    color: var(--color-black);
+    padding: 2px;
+  }
+  .header__mobile-icons svg {
+    width: 20px;
+    height: 20px;
   }
 
   /* Hamburger menu — LEFT side like original */
   .menu-toggle {
     display: flex;
     position: absolute;
-    left: 15px;
-    top: 18px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1001;
   }
 
