@@ -446,7 +446,7 @@ select {
 .collections-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 20px;
   padding: 0 40px;
 }
 .collection-card {
@@ -466,7 +466,7 @@ select {
 .collection-card__overlay {
   position: absolute;
   inset: 20px;
-  border: 1px dashed rgba(255, 255, 255, 0.6);
+  border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1475,11 +1475,11 @@ select {
     font-size: 11px;
   }
 
-  /* Collections — stack on mobile */
+  /* Collections — stack on mobile with spacing like original */
   .collections-grid {
     grid-template-columns: 1fr;
     padding: 0 15px;
-    gap: 15px;
+    gap: 30px;
   }
   .collection-card img {
     height: 280px;
